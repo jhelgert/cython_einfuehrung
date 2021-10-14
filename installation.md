@@ -2,7 +2,7 @@
 
 Um Cython installieren bzw. verwenden zu können, wird ein C Compiler benötigt.
 
-## Wie installiere ich einen C Compiler?
+## Wie installiere ich einen C und C++  Compiler?
 
 ### Windows 
 Hier empfiehlt sich der Microsoft C++ Compiler (MVSC):
@@ -25,25 +25,31 @@ Dazu folgendes in ein neues Terminalfenster einfügen und mit Enter bestätigen:
 Homebrew wird dabei ggf. automatisch Apples Command Line Developer Tools installieren. 
 Nachdem Homebrew installiert wurde, kann innerhalb des Terminals mit
 ```
-brew install gcc libomp
+brew install gcc g++ libomp
 ```
 die GNU Compiler Collection (gcc) und OpenMP installiert werden.
 
 ### Linux
 
-Ihr wisst bestimmt selbst, wie ihr `gcc` und `libomp-dev` installiert :)
+Ihr wisst bestimmt selbst, wie ihr `gcc`, `g++` und `libomp-dev` installiert :)
 Für Ubuntu:
 ```
-sudo apt install gcc libomp-dev
+sudo apt install build-essentials libomp-dev
 ```
 
 ## Wie installiere ich Cython?
 
-**Nachdem** ein C Compiler installiert wurde, kann Cython und der Line Profiler 
+**Nachdem** ein C Compiler installiert wurde, kann Cython 0.29.x und der Line Profiler 
 einfach via pip innerhalb eines Terminals (Für Windowsuser: cmd.exe oder PowerShell) installiert werden:
 
 ```
 pip3 install cython line_profiler
+```
+
+Die aktuellste Cython 3.0.x Version (noch alpha!), kann auch installiert werden:
+
+```
+pip3 install Cython==3.0.0a9
 ```
 
 Nutzer der Anacondadistribution von Python müssen stattdessen nur den `line_profiler` installieren, da Cython bereits
